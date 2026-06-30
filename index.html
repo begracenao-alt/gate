@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Be Grace｜本来の私に還る場所</title>
+<meta name="description" content="美容整体×潜在意識で、本来のあなたへ還るきっかけを。Be Grace の入口。" />
+<meta name="theme-color" content="#3a96bf" />
+<meta property="og:title" content="Be Grace｜本来の私に還る場所" />
+<meta property="og:description" content="美容整体×潜在意識で、本来のあなたへ。" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --accent:#3a96bf; --accent2:#5aa8ca; --ink:#3a4750; --ink-soft:#6f8089;
+    --line:#dbe9f0; --card:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{
+    font-family:"Shippori Mincho","Hiragino Mincho ProN",serif; color:var(--ink);
+    min-height:100vh; line-height:1.9; -webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(120% 80% at 50% -8%, #ffffff 0%, rgba(255,255,255,0) 50%),
+      linear-gradient(160deg, #fcfdfe 0%, #f3f7f9 52%, #e9eff3 100%);
+    background-attachment:fixed;
+  }
+  .wrap{ max-width:440px; margin:0 auto; padding:30px 24px 46px; }
+
+  .brand{ text-align:center; }
+  .brand .mark{ font-family:"Cormorant Garamond",serif; font-style:italic; font-weight:500;
+    font-size:46px; letter-spacing:.04em; color:var(--accent); line-height:1; }
+  .brand .sub{ margin-top:10px; font-size:13px; letter-spacing:.28em; color:var(--ink-soft); }
+  .brand .line{ width:1px; height:22px; margin:12px auto 0;
+    background:linear-gradient(180deg, transparent, var(--accent), transparent); opacity:.7; }
+
+  .welcome{ text-align:center; font-size:14px; line-height:1.85; color:#5f7178;
+    margin:14px 6px 2px; }
+  .welcome p{ margin:0 0 .8em; }
+  .welcome p:last-child{ margin:0; }
+
+  .intro{ background:var(--card); border:1px solid rgba(255,255,255,.7); border-radius:22px;
+    box-shadow:0 22px 55px -28px rgba(60,90,110,.5); padding:26px 22px; margin:24px 0 22px; text-align:center; }
+  .photo{ width:96px; height:96px; border-radius:50%; margin:0 auto 14px; position:relative; overflow:hidden;
+    background:linear-gradient(160deg,var(--accent2),var(--accent)); box-shadow:0 10px 24px -10px var(--accent); }
+  .photo .ph-em{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:32px; color:#fff; }
+  .photo img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 5%; }
+  .intro .name{ font-size:17px; font-weight:600; letter-spacing:.06em; }
+  .intro .copy{ margin-top:12px; font-size:13.5px; line-height:2; color:#5f7178; }
+
+  .links{ display:flex; flex-direction:column; gap:13px; }
+  .link{ display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--ink);
+    background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 18px;
+    box-shadow:0 8px 20px -12px rgba(58,150,191,.35); transition:all .25s; touch-action:manipulation; }
+  .link:hover,.link:active{ border-color:var(--accent); transform:translateY(-2px);
+    box-shadow:0 14px 28px -12px var(--accent); }
+  .link .ico{ flex:none; width:30px; display:flex; align-items:center; justify-content:center; color:var(--accent); }
+  .link .ico svg{ width:23px; height:23px; display:block; }
+  .link.primary .ico{ color:#355f72; }
+  .link .t{ flex:1; }
+  .link .t b{ display:block; font-size:15px; font-weight:600; letter-spacing:.04em; }
+  .link .t small{ display:block; font-size:12px; color:#5f7178; margin-top:2px; }
+  .link .arr{ color:var(--accent); font-family:"Cormorant Garamond",serif; font-style:italic; font-size:18px; }
+  /* 準備中ボタン（押せない） */
+  .link.soon{ opacity:.6; cursor:default; box-shadow:0 5px 14px -10px rgba(58,150,191,.3); }
+  .link.soon .ico{ color:var(--ink-soft); }
+  .soon-tag{ margin-left:auto; font-size:11px; color:var(--ink-soft); border:1px solid var(--line);
+    border-radius:999px; padding:3px 11px; white-space:nowrap; }
+  /* いちばん来てほしいボタン（主役・水色×シルバーのやさしいキラキラ） */
+  .link.primary{ background:linear-gradient(100deg,#a9c8d8 16%,#dde9ef 43%,#fbfdff 50%,#dde9ef 57%,#a9c8d8 84%);
+    background-size:220% auto; animation:goldflow 6.5s linear infinite; border-color:transparent; color:#355f72;
+    box-shadow:0 12px 26px -14px rgba(90,140,165,.55); }
+  @keyframes goldflow{ to{ background-position:-220% center; } }
+  @media (prefers-reduced-motion:reduce){ .link.primary{ animation:none; } }
+  .link.primary .t b{ color:#2f5668; }
+  .link.primary .t small{ color:rgba(50,85,100,.8); }
+  .link.primary .arr{ color:#355f72; }
+
+  .foot{ text-align:center; margin-top:30px; font-size:12px; color:var(--ink-soft); letter-spacing:.08em; line-height:2; }
+  .foot .fmark{ font-family:"Cormorant Garamond",serif; font-style:italic; font-size:16px; color:var(--accent); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">Be Grace</div>
+      <div class="sub">本来の私に還る場所</div>
+      <div class="line"></div>
+    </div>
+
+    <div class="welcome">
+      <p>プレゼントを受け取ってくださり、ありがとうございます🤍</p>
+      <p>姿勢・呼吸・表情が整うと、心まで軽くなる。</p>
+      <p>そして潜在意識が変わると、<br>選ぶ未来まで、静かに変わりはじめます。</p>
+      <p>ここは、その入口です。</p>
+    </div>
+
+    <div class="intro">
+      <div class="photo"><span class="ph-em">🤍</span><img src="profile.jpg" alt="なお" onerror="this.remove()"></div>
+      <div class="name">なお｜美容整体 × 潜在意識</div>
+      <div class="copy">カラダを整えることは、人生を整えること。<br><br>美容整体・美容・潜在意識を通して、<br>本来のあなたへ還るきっかけを届けています。</div>
+    </div>
+
+    <div class="links">
+      <a class="link" href="https://www.instagram.com/nao7_begrace?igsh=ODBzZTdrd2s5Mnc3&utm_source=qr" target="_blank" rel="noopener" data-set="Instagram URL">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></span>
+        <span class="t"><b>Instagram</b><small>毎日の整え方を見る</small></span>
+        <span class="arr">→</span>
+      </a>
+      <div class="link soon">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.3 9.2 L15 12 L10.3 14.8 Z" fill="currentColor" stroke="none"/></svg></span>
+        <span class="t"><b>YouTube</b><small>ただいま準備中</small></span>
+        <span class="soon-tag">準備中</span>
+      </div>
+      <a class="link" href="https://begracenao-alt.github.io/about/" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-7-9.4A3.7 3.7 0 0 1 12 7a3.7 3.7 0 0 1 7 3.6C19 15.6 12 20 12 20z" stroke-linejoin="round"/></svg></span>
+        <span class="t"><b>Be Graceとは</b><small>私が大切にしていること</small></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="link" href="https://begracenao-alt.github.io/henka/" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 C12.6 8 13.6 10 19 12 C13.6 14 12.6 16 12 21 C11.4 16 10.4 14 5 12 C10.4 10 11.4 8 12 3 Z" stroke-linejoin="round"/></svg></span>
+        <span class="t"><b>受講生の変化</b><small>実際の変化を見る</small></span>
+        <span class="arr">→</span>
+      </a>
+      <a class="link primary" href="https://lin.ee/zMSBmw7" target="_blank" rel="noopener" data-set="公式LINE URL">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5H9.5L5 21v-3H4a1.5 1.5 0 0 1-1.5-1.5V7A1.5 1.5 0 0 1 4 5.5Z" stroke-linejoin="round"/></svg></span>
+        <span class="t"><b>公式LINE</b><small>無料ギフトや最新情報を受け取る</small></span>
+        <span class="arr">→</span>
+      </a>
+    </div>
+
+    <div class="foot">
+      <span class="fmark">Be Grace</span><br>
+      あなたが、本来のあなたに還るきっかけを。
+    </div>
+  </div>
+</body>
+</html>
